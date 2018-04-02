@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="icon" type="image/png" sizes="16x16" href="plugins/images/favicon.png">
+		<title>商户交易</title>
+		<!-- Bootstrap Core CSS -->
+		<link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link href="plugins/bower_components/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+
+		<!--<link href="https://cdn.datatables.net/buttons/1.4.2/css/buttons.dataTables.min.css" rel="stylesheet" type="text/css" />-->
+		<!-- Menu CSS -->
+		<link href="plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
+		<!-- animation CSS -->
+		<link href="css/animate.css" rel="stylesheet">
+		<!-- Custom CSS -->
+		<link href="css/style.css" rel="stylesheet">
+		<!-- color CSS -->
+		<link href="css/colors/megna-dark.css" id="theme" rel="stylesheet">
+		<!--alerts CSS -->
+		<link href="plugins/bower_components/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
+		<style>
+			/*table#myTable tr td:nth-child(13) {
+				text-align: right !important;
+			}*/
+			table#myTable tr td{
+				text-align: center !important;
+			}
+			table#myTable tr th{
+				text-align: center !important;
+			}
+			table#myTable tr td:nth-child(13) {
+				text-align: right !important;
+			}
+			table#myTable tr th:nth-child(13) {
+				text-align: right !important;
+			}
+		</style>
+		<!--自己项目css allstyle.css -->
+		<link rel="stylesheet" type="text/css" href="css/obcss/allstyle.css" />
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+    <!--<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>-->
+    <!--<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>-->
+<![endif]-->
+	</head>
+
+	<body class="fix-header">
+		<!-- ============================================================== -->
+		<!-- Preloader 加载中...-->
+		<!-- ============================================================== -->
+		<div class="preloader">
+			<svg class="circular" viewBox="25 25 50 50">
+				<circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+			</svg>
+		</div>
+		<!-- ============================================================== -->
+		<!-- Wrapper 主体页-->
+		<!-- ============================================================== -->
+		<div id="wrapper">
+			<!-- ============================================================== -->
+			<!--【页面共通】 Topbar header - style you can find in pages.scss   上面导航top-nav-->
+			<!-- ============================================================== -->
+			<nav class="navbar navbar-default navbar-static-top m-b-0">
+				<div class="navbar-header">
+					<div class="top-left-part">
+						<!-- Logo -->
+						<a class="logo"  >
+							<!-- Logo icon image, you can use font-icon also --><b>
+                        <!--This is dark logo icon--><img src="plugins/images/admin-logo.png" alt="home" class="dark-logo" /><!--This is light logo icon--><img src="plugins/images/admin-logo-dark.png" alt="home" class="light-logo" />
+                     </b>
+							<!-- Logo text image you can use text also --><span class="hidden-xs">
+                        <!--This is dark logo text--><img src="plugins/images/admin-text.png" alt="home" class="dark-logo" /><!--This is light logo text--><img src="plugins/images/admin-text-dark.png" alt="home" class="light-logo" />
+                     </span> </a>
+					</div>
+					<!-- /Logo -->
+					<!-- Search input and Toggle icon -->
+					<ul class="nav navbar-top-links navbar-left">
+						<li>
+							<a href="javascript:void(0)" class="open-close waves-effect waves-light"><i class="ti-menu"></i></a>
+						</li>
+
+					</ul>
+					<!--【改  面包屑导航】-->
+					<ol class=" navbar-left breadcrumb">
+						<li>
+							<a  >报备管理</a>
+						</li>
+						<li class="active">商户交易</li>
+					</ol>
+
+					<ul class="nav navbar-top-links navbar-right pull-right">
+						<li class="">
+							<a class="dropdown-toggle profile-pic" data-toggle="dropdown"  >
+								<img src="imgs/user.png" alt="user-img" width="30" class="img-circle">
+								<b class="hidden-xs" id="loginUserName">Steave</b> </a>
+							<!--<ul class="dropdown-menu dropdown-user animated flipInY">-->
+
+							<!--<li>-->
+							<!--<a href="login.html"><i class="fa fa-power-off"></i> 退出</a>-->
+							<!--</li>-->
+							<!--</ul>-->
+							<!-- /.dropdown-user -->
+						</li>
+						<!--<li class="theme"><button class=" right-side-toggle waves-effect waves-light btn-info btn-circle pull-right"><i class="ti-settings text-white"></i></button></li>-->
+						<li><a title="退出"><img class="logout" src="imgs/logout.png"/></a></li>
+						<!-- /.dropdown -->
+					</ul>
+
+				</div>
+				<!-- /.navbar-header -->
+				<!-- /.navbar-top-links -->
+				<!-- /.navbar-static-side -->
+			</nav>
+			<!-- End Top Navigation -->
+			<!-- ============================================================== -->
+			<!--【页面共通】 Left Sidebar - style you can find in sidebar.scss  左侧 功能菜单 left-sidebar-->
+			<!-- ============================================================== -->
+			<div class="navbar-default sidebar" role="navigation">
+				<!--超出 可滑动 样式 的左侧 功能菜单-->
+				<div class="sidebar-nav slimscrollsidebar">
+					<!--【LOGO  左侧菜单 的head】-->
+					<div class="sidebar-head">
+						<h3><span class="fa-fw open-close"><i class="ti-close ti-menu"></i></span> <span class="hide-menu">Navigation</span></h3>
+					</div>
+					<!--功能菜单【可动态  append or 框架 铺菜单数据】-->
+					<ul class="nav" id="side-menu">
+
+					</ul>
+				</div>
+			</div>
+			<!-- ============================================================== -->
+			<!-- End Left Sidebar -->
+			<!-- ============================================================== -->
+			<!-- ============================================================== -->
+			<!--【页面   不同 内容不同】 Page Content  右侧页内 内容 包括   页脚以上部分 和 页脚footer 【top left 定位 所以  page Content  预留 了top 和 left 的 宽高度】 page-->
+			<!-- ============================================================== -->
+			<div id="page-wrapper">
+				<!--.container-fluid  footer以上部分【每个页面 不同的地方】 -->
+				<div class="container-fluid">
+					<!--<div class="row bg-title">-->
+					<!--<div class="col-sm-3 col-md-4 col-sm-4 col-xs-12">-->
+					<!--<h4 class="page-title">用户管理</h4> </div>-->
+					<!--<div class="col-sm-9 col-sm-8 col-md-8 col-xs-12">-->
+					<!--<button class="right-side-toggle waves-effect waves-light btn-info btn-circle pull-right m-l-20"><i class="ti-settings text-white"></i></button>-->
+
+					<!--&lt;!&ndash;【改  面包屑导航】&ndash;&gt;-->
+					<!--<ol class="breadcrumb">-->
+					<!--<li>-->
+					<!--<a  >人事架构</a>-->
+					<!--</li>-->
+					<!--<li class="active">用户管理</li>-->
+					<!--</ol>-->
+					<!--</div>-->
+					<!-- /.col-sm-12 -->
+					<!--</div>-->
+					<!-- /row -->
+					<!--搜索入力框 及     操作按钮 人row-->
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="white-box">
+								<div class="row">
+									<div class="page-title">
+										<!--<h5><img src="imgs/iconmen.png"> 商户交易</h5>-->
+										<h5><span><i class=" fa titleIcon fa-shopping-cart"></i></span>商户交易</h5>
+									</div>
+									<div class=" buttons">
+										<span class="span" id="searchBtn" name="search"><img src="imgs/iconselect.png"></img> 查询</span>
+									</div>
+								</div>
+								<hr />
+								<div class="row">
+									<div class="form-inline myForm" style="padding-top:0px;padding-bottom: 0px ;">
+										<div class="form-group" style="padding: 0px 0px 0px 16px;">
+											<span class="control-label">报备日期</span>
+											<input class="form-control" id="startDate" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true,})" readonly="" />
+											<!----->
+											<!--<input class="form-control" id="endDate" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true,})" readonly="" />-->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--表格 row-->
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="white-box">
+								<div class="table-responsive">
+									<table id="myTable" class="table table-striped">
+										<thead>
+											<tr>
+												<th>序号</th>
+												<th>隐藏</th>
+												<th>报备时间</th>
+												<th>回盘时间</th>
+												<th>回盘结果码</th>
+												<th>回盘结果说明</th>
+												<th>回盘文件名</th>
+												<th>交易流水号</th>
+												<th>交易日期</th>
+												<th>项目编号</th>
+												<th>合同编号</th>
+												<th>出账人平台用户名</th>
+												<th>金额（元）</th>
+												<th>业务类型</th>
+											</tr>
+										</thead>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+						<!-- /.modal-dialog -->
+					<!-- /.row -->
+					<!-- ============================================================== -->
+					<!-- Right sidebar -->
+					<!-- ============================================================== -->
+					<!-- .right-sidebar  换肤【不动  换肤部分  不用改动】-->
+					<div class="right-sidebar">
+						<div class="slimscrollright">
+							<div class="rpanel-title"> Service Panel <span><i class="ti-close right-side-toggle"></i></span> </div>
+							<div class="r-panel-body">
+								<ul id="themecolors" class="m-t-20">
+									<li><b>亮色系皮肤</b></li>
+									<li>
+										<a href="javascript:void(0)" data-theme="default" class="default-theme">1</a>
+									</li>
+									<li>
+										<a href="javascript:void(0)" data-theme="green" class="green-theme">2</a>
+									</li>
+									<li>
+										<a href="javascript:void(0)" data-theme="gray" class="yellow-theme">3</a>
+									</li>
+									<li>
+										<a href="javascript:void(0)" data-theme="blue" class="blue-theme">4</a>
+									</li>
+									<li>
+										<a href="javascript:void(0)" data-theme="purple" class="purple-theme">5</a>
+									</li>
+									<li>
+										<a href="javascript:void(0)" data-theme="megna" class="megna-theme">6</a>
+									</li>
+									<li><b>灰色系皮肤</b></li>
+									<br/>
+									<li>
+										<a href="javascript:void(0)" data-theme="default-dark" class="default-dark-theme">7</a>
+									</li>
+									<li>
+										<a href="javascript:void(0)" data-theme="green-dark" class="green-dark-theme">8</a>
+									</li>
+									<li>
+										<a href="javascript:void(0)" data-theme="gray-dark" class="yellow-dark-theme">9</a>
+									</li>
+									<li>
+										<a href="javascript:void(0)" data-theme="blue-dark" class="blue-dark-theme">10</a>
+									</li>
+									<li>
+										<a href="javascript:void(0)" data-theme="purple-dark" class="purple-dark-theme">11</a>
+									</li>
+									<li>
+										<a href="javascript:void(0)" data-theme="megna-dark" class="megna-dark-theme working">12</a>
+									</li>
+								</ul>
+
+							</div>
+						</div>
+					</div>
+					<!-- ============================================================== -->
+					<!-- End Right sidebar -->
+					<!-- ============================================================== -->
+				</div>
+				<!--.footer   页脚footer部分-->
+				<!--<footer class="footer text-center"> 2017 &copy; Ample Admin brought to you by themedesigner.in </footer>-->
+			</div>
+			<!-- /#page-wrapper -->
+		</div>
+		<!-- /#wrapper -->
+		<!-- jQuery -->
+		<script src="plugins/bower_components/jquery/dist/jquery.min.js"></script>
+		<!--<!--<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>-->-->
+		<!-- Bootstrap Core JavaScript -->
+		<script src="bootstrap/dist/js/bootstrap.min.js"></script>
+		<!-- Menu Plugin JavaScript -->
+		<script src="plugins/bower_components/sidebar-nav/dist/sidebar-nav.js"></script>
+		<!--slimscroll JavaScript -->
+		<script src="js/jquery.slimscroll.js"></script>
+		<!--Wave Effects -->
+		<script src="js/waves.js"></script>
+		<!-- Custom Theme JavaScript -->
+		<script src="js/custom.min.js"></script>
+		<!--sidbar 修复-->
+		<script src="js/objs/creatMenu.js"></script>
+		<script src="plugins/bower_components/datatables/jquery.dataTables.min.js"></script>
+		<!-- start - This is for export functionality only -->
+		<!--<script src="https://cdn.bootcss.com/jszip/3.1.4/jszip.min.js"></script>-->
+		<!--<script src="https://cdn.bootcss.com/pdfmake/0.1.18/pdfmake.min.js"></script>-->
+		<!--<script src="https://cdn.bootcss.com/pdfmake/0.1.18/vfs_fonts.js"></script>-->
+
+		<!--<script src="https://cdn.datatables.net/buttons/1.4.2/js/buttons.html5.min.js"></script>
+		<script src="https://cdn.datatables.net/buttons/1.4.2/js/buttons.print.min.js"></script>
+		<script src="https://cdn.datatables.net/buttons/1.4.2/js/buttons.flash.min.js"></script>
+		<script src="https://cdn.datatables.net/buttons/1.4.2/js/dataTables.buttons.min.js"></script>-->
+
+		<!-- end - This is for export functionality only -->
+		<!--Style Switcher -->
+		<script src="plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
+		<!--<script src="js/objs/allActive.js" type="text/javascript" charset="utf-8"></script>-->
+		<!-- Sweet-Alert  -->
+		<script src="plugins/bower_components/sweetalert/sweetalert.min.js"></script>
+		<script src="js/objs/allActive.js" ></script>
+		<script src="js/objs/checkMoney.js"></script>
+		<script src="js/objs/b_merchantTransaction.js"></script>
+		<script src="js/My97DatePicker/WdatePicker.js"></script>
+	</body>
+
+</html>

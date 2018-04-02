@@ -1,0 +1,13 @@
+/*菜单间距*/
+#side-menu>li>a {
+	 padding: 15px 15px!important;
+	display: block;
+}
+.sidebar .arrow {
+	position: absolute;
+	right: 20px;
+	top: 15px !important;
+}
+.sidebar .nav-second-level li a {
+	padding: 13px 10px 13px 40px!important;
+}

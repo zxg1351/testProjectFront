@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <title> hAdmin- 主页</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html" />
+    <![endif]-->
+
+    <!--<link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">-->
+    <style>
+        .top2{
+            /*border: 1px solid black;*/
+            width: 100%;
+            height: 50px;
+            background-color: #438EB9;
+
+        }
+        .top2 p{
+            font-family: "宋体";
+            font-size: 20px;
+            color: white;
+            padding-top: 10px;
+            margin-left: 40px;
+        }
+    </style>
+</head>
+
+<body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
+    <div id="wrapper">
+        <div class="top2">
+            <p>易行租车系统</p>
+        </div>
+        <!--左侧导航开始-->
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="nav-close"><i class="fa fa-times-circle"></i>
+            </div>
+            <div class="sidebar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="clear">
+                                    <span class="block m-t-xs" style="font-size:20px;">
+                                        <i class="fa fa-area-chart"></i>
+                                        <strong class="font-bold">hAdmin</strong>
+                                    </span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="logo-element">hAdmin
+                        </div>
+                    </li>
+                    <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+                        <span class="ng-scope">公司列表</span>
+                    </li>
+                    <li>
+                        <a class="J_menuItem" href="zhuye.html">
+                            <i class="fa fa-home"></i>
+                            <span class="nav-label">主页</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa fa-asterisk"></i>
+                            <span class="nav-label ">登录注册</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a class="J_menuItem" href="login.html">欢迎登录</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="register.html">欢迎注册</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fa fa fa-cogs"></i>
+                            <span class="nav-label">会员管理</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a class="J_menuItem" href="addVip.html">会员注册</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="vipCheck.html">会员查询</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="vipRevise.html">会员修改</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="vipRentCar.html">会员租车</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa fa-cart-plus"></i>
+                            <span class="nav-label">订单管理</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a class="J_menuItem" href="graph_echarts.html">在租订单</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="graph_flot.html">已还订单</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="graph_morris.html">订单详情</a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#"><i class="fa fa-cab"></i> <span class="nav-label">车辆管理</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a class="J_menuItem" href="form_basic.html">品牌管理</a>
+                            </li>
+                            <li><a class="J_menuItem" href="form_validate.html">添加车辆</a>
+                            </li>
+                            <li><a class="J_menuItem" href="form_advanced.html">车辆查询</a>
+                            </li>
+                            <li><a class="J_menuItem" href="form_wizard.html">车辆报损</a>
+                            </li>
+                            <li><a class="J_menuItem" href="form_wizard.html">车辆维修</a>
+                            </li>
+
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-institution"></i> <span class="nav-label">门店管理</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a class="J_menuItem" href="contacts.html">添加门店</a>
+                            </li>
+                            <li><a class="J_menuItem" href="profile.html">门店查询</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa fa-balance-scale"></i>
+                            <span class="nav-label">员工管理</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a class="J_menuItem" href="addEmp.html">添加员工</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="EmpRevise.html">修改员工</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="empCheck.html">员工查询</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#"><i class="fa fa-cog"></i> <span class="nav-label">系统设置</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a class="J_menuItem" href="table_basic.html">基本表格</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--左侧导航结束-->
+        <!--右侧部分开始-->
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header"><a class="navbar-minimalize minimalize-styl-2 btn btn-info " href="#"><i class="fa fa-bars"></i> </a>
+                        <form role="search" class="navbar-form-custom" method="post" action="search_results.html">
+
+                        </form>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                <i class="fa">退出系统</i> <span class="label label-warning"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="row J_mainContent" id="content-main">
+                <iframe id="J_iframe" width="100%" height="100%" src="right.html" frameborder="0" data-id="index_v1.html" seamless></iframe>
+            </div>
+        </div>
+        <!--右侧部分结束-->
+    </div>
+
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="js/plugins/layer/layer.min.js"></script>
+
+    <!-- 自定义js -->
+    <script src="js/hAdmin.js?v=4.1.0"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+    <!-- 第三方插件 -->
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+	</body>
+</html>

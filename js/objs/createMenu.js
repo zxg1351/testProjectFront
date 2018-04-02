@@ -18,16 +18,6 @@ $(function() {
 			menuname: "密码管理",
 			icon: "fa-user",
 			nodes: []
-		}, {
-			action: "f_transferApprove.html",
-			menuname: "调职审批",
-			icon: "fa-user",
-			nodes: []
-		}, {
-			action: "f_departureApprove.html",
-			menuname: "离职审批",
-			icon: "fa-user",
-			nodes: []
 		}]
 	},
 	{
@@ -37,6 +27,37 @@ $(function() {
 		nodes: [{
 			action: "employeeManagement.html",
 			menuname: "员工管理",
+			icon: "fa-user",
+			nodes: []
+		}]
+	},
+	{
+		action: "#",
+		menuname: "区域管理",
+		icon: "fa-user",
+		nodes: [{
+			action: "largeAreaManagement.html",
+			menuname: "大区域管理",
+			icon: "fa-user",
+			nodes: []
+		}]
+	},{
+		action: "#",
+		menuname: "订单管理",
+		icon: "fa-user",
+		nodes: [{
+			action: "orderManagement.html",
+			menuname: "订单管理",
+			icon: "fa-user",
+			nodes: []
+		},{
+			action: "productsManagement.html",
+			menuname: "产品管理",
+			icon: "fa-user",
+			nodes: []
+		},{
+			action: "vendorsManagement.html",
+			menuname: "经销商管理",
 			icon: "fa-user",
 			nodes: []
 		}]

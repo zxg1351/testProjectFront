@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>短信管理</title>
+		<title>大区域管理</title>
 		<!-- 新 Bootstrap 核心 CSS 文件 -->
 		<link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.min.css" />
 		<!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
@@ -16,30 +16,38 @@
 		<script type="text/javascript" src="bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
 	<script src="js/objs/createMenu.js"></script>
 	</head>
-	<body>
-		<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="#">后台管理系统</a>
-			</div>
-			
-			
-		</div>
-		<div class="row container">
 	
+	<div class="navbar-default sidebar" role="navigation">
+			<!--超出 可滑动 样式 的左侧 功能菜单-->
+			<div class="sidebar-nav slimscrollsidebar">
+				<!--【LOGO  左侧菜单 的head】-->
+				<div class="sidebar-head">
+					<h3><span class="fa-fw open-close"><i class="ti-close ti-menu"></i></span> <span class="hide-menu">Navigation</span></h3>
+				</div>
+				<!--功能菜单【可动态  append or 框架 铺菜单数据】-->
+				<ul class="nav" id="side-menu">
+
+				</ul>
+			</div>
+		</div>
+	<body>
+		
+		<div class="row container">
+
 			<div class="row col-md-3">
-				<label>发送者</label>
+				<label>区域名称</label>
 				<input type="text" id="sender" />
 			</div>
 			<div class="row col-md-3">
-				<label>是否发送成功状态</label>
+				<label>区域编号</label>
 				<input type="text" id="status" />
 			</div>
-			<div class="row col-md-3">
-				<label>短信类型</label>
-				<input type="text" id="type" />
-			</div>
+			
 			<div class="row col-md-3">
 				<button class="search" id="search">查询</button>
+			</div>
+			<div class="row col-md-3">
+				<button class="search" id="new">新建</button>
 			</div>
 		</div>
 
@@ -48,7 +56,7 @@
 		</table>
 
 	</body>
-	<script src="js/objs/apptest.js"></script>
+	<!--<script src="js/objs/apptest.js"></script>-->
 	
 
 </html>
